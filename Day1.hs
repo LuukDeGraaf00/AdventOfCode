@@ -16,18 +16,12 @@ output2 = readFile "Day1Input.txt" <&> (part2 . parse)
 -- | Part 1 function.
 part1 :: (Num a, Ord a) => ([a], [a]) -> a
 part1 (xs, ys) = sum (zipWith difference (sort xs) (sort ys))
+    where difference x y = abs (x - y)
 
 -- | Part 2 function.
 part2 :: ([Int], [Int]) -> Int 
 part2 (xs, ys) = foldr (\a -> (similarity a ys +)) 0 xs
-
--- | Difference between two numbers.
-difference :: Num a => a -> a -> a
-difference x y = abs (x - y)
-
--- | Compute similarity of value. 
-similarity :: (Foldable t, Num b, Eq b) => b -> t b -> b
-similarity value = foldr (\x -> ((if value == x then value else 0) +)) 0
+    where similarity value = foldr (\x -> ((if value == x then value else 0) +)) 0
 
 -- | Parsing function.
 parse :: String -> ([Int], [Int])
