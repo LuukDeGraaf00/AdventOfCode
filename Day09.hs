@@ -1,4 +1,4 @@
-module Day9 where
+module Day09 where
 
 import Data.Sequence as S
 import Data.Char (digitToInt, intToDigit)

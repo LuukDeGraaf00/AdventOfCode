@@ -1,4 +1,4 @@
-module Day8 where
+module Day08 where
 
 import Data.Functor
 import Data.Map qualified as Map
