@@ -1,1 +1,28 @@
 *.txt
+
+# Compiled artifacts
+/target/
+
+# Cargo package metadata
+**/*.rs.bk
+Cargo.lock
+
+# If building a library meant for publishing, keep Cargo.lock.
+# If this is a binary project, remove the above line.
+
+# Backup and temp files
+*.swp
+*.swo
+*.tmp
+*.temp
+*~
+.DS_Store
+
+# Test artifacts
+/coverage/
+/llvm-profdata
+/llvm-profraw
+
+# Rust analyzer
+.rustc_info.json
+.rustc_workspace_info.json
