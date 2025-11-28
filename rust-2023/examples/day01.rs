@@ -1,8 +1,8 @@
 use std::{fs::File, io::{BufRead, BufReader}};
 
 fn main() {
-    println!("part 1 {}", part1(BufReader::new(File::open("input/day1.txt").unwrap())));
-    println!("part 2 {}", part2(BufReader::new(File::open("input/day1.txt").unwrap())));
+    println!("part 1 {}", part1(BufReader::new(File::open("input/day01.txt").unwrap())));
+    println!("part 2 {}", part2(BufReader::new(File::open("input/day01.txt").unwrap())));
 }
 
 fn part1(input : BufReader<File>) -> u32 {
