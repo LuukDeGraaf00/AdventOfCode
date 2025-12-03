@@ -1,9 +1,8 @@
-use std::{collections::HashSet, fs::{self} 
-};
+use std::{collections::HashSet};
 
 fn main() {
-    println!("part 1 {}", part1(fs::read_to_string("input/day02.txt").unwrap()));
-    println!("part 2 {}", part2(fs::read_to_string("input/day02.txt").unwrap()));
+    println!("part 1 {}", part1(std::fs::read_to_string("input/day02.txt").unwrap()));
+    println!("part 2 {}", part2(std::fs::read_to_string("input/day02.txt").unwrap()));
 }
 
 fn solve(input : String, cache : HashSet<u64>) -> u64 {
