@@ -3,7 +3,7 @@ use std::ops::Index;
 fn main() {
     let input = parse();
     println!("part 1 {}", input.iter().map(|m| solve(&m, 0, 1)).sum::<u64>());
-    println!("part 1 {}", input.iter().map(|m| solve(&m, 0, 11)).sum::<u64>());
+    println!("part 2 {}", input.iter().map(|m| solve(&m, 0, 11)).sum::<u64>());
 }
 
 fn parse() -> Vec<Vec<u32>> {
